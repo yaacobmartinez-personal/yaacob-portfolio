@@ -1,7 +1,6 @@
 # Yaacob Martinez — Portfolio
 
-Next.js 15 portfolio site inspired by the Aurorix Framer template.
-
+Next.js 15 portfolio site.
 ## Getting started
 
 ```bash
