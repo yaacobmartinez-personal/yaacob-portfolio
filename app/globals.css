@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark theme (default) — RGB channels for opacity modifier support */
+:root,
+[data-theme="dark"] {
+  --color-bg-rgb:           11 11 11;
+  --color-bg-2-rgb:         20 20 20;
+  --color-bg-3-rgb:         30 30 30;
+  --color-border-rgb:       42 42 42;
+  --color-border-light-rgb: 56 56 56;
+  --color-ink-rgb:          255 255 255;
+  --color-ink-2-rgb:        180 180 180;
+  --color-ink-3-rgb:        107 107 107;
+  --color-ink-4-rgb:        58 58 58;
+  --color-accent-rgb:       200 169 110;
+  --color-accent-dark-rgb:  168 137 62;
+  --color-available-rgb:    74 222 128;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --color-bg-rgb:           246 244 240;
+  --color-bg-2-rgb:         237 234 228;
+  --color-bg-3-rgb:         228 224 216;
+  --color-border-rgb:       214 209 200;
+  --color-border-light-rgb: 196 191 180;
+  --color-ink-rgb:          20 18 16;
+  --color-ink-2-rgb:        74 69 62;
+  --color-ink-3-rgb:        138 131 122;
+  --color-ink-4-rgb:        196 191 184;
+  --color-accent-rgb:       168 137 62;
+  --color-accent-dark-rgb:  138 110 40;
+  --color-available-rgb:    22 163 74;
+}
+
+html { overflow-x: clip; scroll-behavior: smooth; }
+
+body {
+  overflow-x: clip;
+  background-color: rgb(var(--color-bg-rgb));
+  color: rgb(var(--color-ink-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Framer Motion handles all reveal & stagger animations */
