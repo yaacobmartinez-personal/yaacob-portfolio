@@ -1,23 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/lib/data";
-import { containerVariants, heroItem, viewport } from "@/lib/motion";
-
-/** Decorative code snippet — no real image needed */
-const codeLines = [
-  { indent: 0, text: "const yaacob = {",                    dim: false },
-  { indent: 1, text: 'role:      "Full Stack Developer",',  dim: false },
-  { indent: 1, text: 'location:  "Malolos, PH 🇵🇭",',      dim: false },
-  { indent: 1, text: 'available:  true,',                   dim: false },
-  { indent: 1, text: "stack: [",                            dim: false },
-  { indent: 2, text: '"Next.js", "React", "Node.js",',      dim: true  },
-  { indent: 2, text: '"PostgreSQL", "AWS", "Supabase",',    dim: true  },
-  { indent: 2, text: '"TypeScript", "AI APIs",',            dim: true  },
-  { indent: 1, text: "],",                                   dim: false },
-  { indent: 1, text: 'passion: "clean, lasting software",', dim: false },
-  { indent: 0, text: "};",                                   dim: false },
-];
+import { containerVariants, heroItem } from "@/lib/motion";
 
 export default function Hero() {
   return (
@@ -130,55 +116,35 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right: decorative code panel */}
+          {/* Right: portrait with a layered code accent */}
           <motion.div
-            className="self-center lg:self-center"
+            className="self-center"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
-            aria-hidden="true"
           >
-            <div className="relative w-full rounded-2xl overflow-hidden bg-bg-2 border border-border shadow-2xl">
-              {/* Window chrome */}
-              <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-bg-3">
-                <span className="w-2.5 h-2.5 rounded-full bg-border-light" />
-                <span className="w-2.5 h-2.5 rounded-full bg-border-light" />
-                <span className="w-2.5 h-2.5 rounded-full bg-border-light" />
-                <span className="ml-3 text-[10px] text-ink-3 font-mono">about.ts</span>
-              </div>
+            <div className="relative w-full max-w-[420px] mx-auto">
+              {/* Soft glow behind the portrait */}
+              <div
+                className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/15 to-transparent blur-2xl pointer-events-none"
+                aria-hidden="true"
+              />
 
-              {/* Code */}
-              <pre className="px-5 py-5 text-xs font-mono leading-6 overflow-x-auto">
-                {codeLines.map((line, i) => (
-                  <div key={i} style={{ paddingLeft: `${line.indent * 1.25}rem` }}>
-                    {line.dim ? (
-                      <span className="text-ink-3">{line.text}</span>
-                    ) : (
-                      <span>
-                        {line.text.startsWith('"') || line.text === "]," || line.text === "};" ? (
-                          <span className="text-ink-2">{line.text}</span>
-                        ) : line.text.includes(":") ? (
-                          <>
-                            <span className="text-accent">
-                              {line.text.slice(0, line.text.indexOf(":"))}
-                            </span>
-                            <span className="text-ink-3">:</span>
-                            <span className="text-ink-2">
-                              {line.text.slice(line.text.indexOf(":") + 1)}
-                            </span>
-                          </>
-                        ) : (
-                          <span className="text-ink">{line.text}</span>
-                        )}
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </pre>
-
-              {/* Blinking cursor */}
-              <div className="px-5 pb-5 font-mono text-xs">
-                <span className="inline-block w-2 h-4 bg-accent animate-pulse align-middle" />
+              {/* Portrait */}
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl bg-bg-2 aspect-[920/1129]">
+                <Image
+                  src="/yaacob-portrait.webp"
+                  alt="Portrait of Yaacob Martinez"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 90vw, 420px"
+                  className="object-cover"
+                />
+                {/* Bottom fade so the photo blends into the layout */}
+                <div
+                  className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-bg-2/90 via-bg-2/20 to-transparent pointer-events-none"
+                  aria-hidden="true"
+                />
               </div>
             </div>
           </motion.div>
