@@ -1,19 +1,35 @@
 [
   {
+    "title": "forme",
+    "description": "a full-stack e-commerce store for unisex contemporary essentials. Built with Next.js 16 (App Router), TypeScript, Supabase (Postgres + Auth + RLS), Tailwind CSS v4, and Zustand. Calm, editorial design system; complete cart-to-checkout flow.",
+    "language": "TypeScript",
+    "topics": [],
+    "repo_url": "https://github.com/yaacobmartinez-personal/forme",
+    "live_url": "https://forme-shop.vercel.app"
+  },
+  {
     "title": "flux-kanban",
     "description": "A polished, multi-tenant Kanban board. React (Vite) + Tailwind v4 + @dnd-kit + Zustand + motion/react, backed by Supabase for auth and storage.",
     "language": "JavaScript",
     "topics": [],
     "repo_url": "https://github.com/yaacobmartinez-personal/flux-kanban",
-    "live_url": "https://flux-pm.vercel.app"
+    "live_url": "https:/flux-pm.vercel.app"
   },
   {
-    "title": "andys-barber-shop",
-    "description": "Marketing website for Andy's Barbershop (Builders Warehouse Malolos) — built with Next.js 14, Tailwind CSS, Mapbox, and Resend for contact/booking form emails.",
+    "title": "email-sender",
+    "description": "Email Sender App A Next.js application for sending emails via Sender.net API.",
     "language": "TypeScript",
     "topics": [],
-    "repo_url": "https://github.com/yaacobmartinez-personal/andys-barber-shop",
-    "live_url": "https://andys-barber-shop-one.vercel.app"
+    "repo_url": "https://github.com/yaacobmartinez-personal/email-sender",
+    "live_url": "https://email-sender-two-livid.vercel.app"
+  },
+  {
+    "title": "barso",
+    "description": "Barso Homes - Modern Multi-Audience Real Estate Platform A Next.js-powered website serving three distinct audiences: prospective home buyers, trades/subcontractors, and investors.",
+    "language": "TypeScript",
+    "topics": [],
+    "repo_url": "https://github.com/yaacobmartinez-personal/barso",
+    "live_url": "https://barso-henna.vercel.app"
   },
   {
     "title": "chapter-realestate",
@@ -24,20 +40,12 @@
     "live_url": "https://chapter-realestate.vercel.app"
   },
   {
-    "title": "barso",
-    "description": "Barso Homes - Modern Multi-Audience Real Estate Platform. A Next.js-powered website serving three distinct audiences: prospective home buyers, trades/subcontractors, and investors.",
+    "title": "andys-barber-shop",
+    "description": "Marketing website for Andy's Barbershop (Builders Warehouse Malolos) — built with Next.js 14, Tailwind CSS, Mapbox, and Resend for contact/booking form emails.",
     "language": "TypeScript",
     "topics": [],
-    "repo_url": "https://github.com/yaacobmartinez-personal/barso",
-    "live_url": "https://barso-henna.vercel.app"
-  },
-  {
-    "title": "ehfc-tracking",
-    "description": "Interactive map application for tracking locations in Malolos, Bulacan with pin management and Supabase integration.",
-    "language": "TypeScript",
-    "topics": [],
-    "repo_url": "https://github.com/yaacobmartinez-personal/ehfc-tracking",
-    "live_url": "https://ehfc-tracking.vercel.app"
+    "repo_url": "https://github.com/yaacobmartinez-personal/andys-barber-shop",
+    "live_url": "https://andys-barber-shop-one.vercel.app"
   },
   {
     "title": "audy",
@@ -48,11 +56,11 @@
     "live_url": null
   },
   {
-    "title": "email-sender",
-    "description": "Email Sender App — A Next.js application for sending emails via Sender.net API with support for custom variables, attachments, and client-side validation.",
+    "title": "ehfc-tracking",
+    "description": "Interactive map application for tracking locations in Malolos, Bulacan",
     "language": "TypeScript",
     "topics": [],
-    "repo_url": "https://github.com/yaacobmartinez-personal/email-sender",
-    "live_url": "https://email-sender-two-livid.vercel.app"
+    "repo_url": "https://github.com/yaacobmartinez-personal/ehfc-tracking",
+    "live_url": "https://ehfc-tracking.vercel.app"
   }
 ]
